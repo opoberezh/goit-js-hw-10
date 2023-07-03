@@ -1,0 +1,86 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  color: whitesmoke;
+    background-color:  gray;
+
+}
+
+img {
+  display: block;
+  width: 800px;
+  height: auto;
+}
+
+
+
+.breed-select {
+    margin-bottom: 10px;
+    max-width: 250px;
+  }
+  .cat-info {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .cat-info > div {
+    max-width: 600px;
+  }
+  
+  .cat-header {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+ .loader {
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+ }
+  .loadering {
+    width: 48px;
+    height: 48px;
+    background: #FF3D00;
+    display: block;
+    margin: 150px auto;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotationBack 1s ease-in-out infinite reverse;
+  }
+  .loadering::before {
+    content: '';  
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    transform: rotate(45deg);
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: #FF3D00;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  }
+  .loadering::after {
+    content: '';  
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #FFF;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  }
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
