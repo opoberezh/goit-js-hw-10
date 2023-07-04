@@ -11,13 +11,14 @@ const errorEl = document.querySelector('.error');
 const divEl = document.querySelector('.cat-info');
 const spanEl = document.querySelector('.loadering');
 
+// document.body.style.backgroundColor = 'gray';
 errorEl.style.display = 'none';
 
 function initSlimSelect() {
   const slimSelect = new SlimSelect({
     select: document.querySelector('.breed-select'),
     settings: {
-      showSearch: false,
+      openPosition: 'down',
     },
   });
 
@@ -50,10 +51,10 @@ fetchBreeds()
   .then(data => {
     catsArr = data;
     data.forEach(el => {
-      const oprionEl = document.createElement('option');
-      oprionEl.value = el.id;
-      oprionEl.textContent = el.name;
-      selectEl.append(oprionEl);
+      const optionEl = document.createElement('option');
+      optionEl.value = el.id;
+      optionEl.textContent = el.name;
+      selectEl.append(optionEl);
     });
 
     hideLoader();
